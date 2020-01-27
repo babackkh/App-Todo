@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 import { MatCheckboxChange } from '@angular/material';
+import { TodoServiceService } from 'src/app/service/todo-service.service';
+import { DataModel } from 'src/app/model/data-model';
 
 @Component({
   selector: 'app-todo-list',
@@ -11,24 +13,20 @@ export class TodoListComponent implements OnInit {
   checkboxValue: string;
   ifChecked = false;
 
-  constructor() { }
-  movies = [
-    'Episode I - The Phantom Menace',
-    'Episode II - Attack of the Clones',
-    'Episode III - Revenge of the Sith',
-    'Episode IV - A New Hope',
-    'Episode V - The Empire Strikes Back',
-    'Episode VI - Return of the Jedi',
-    'Episode VII - The Force Awakens',
-    'Episode VIII - The Last Jedi'
-  ];
+  constructor(private todoData: TodoServiceService) { }
+  todos: DataModel[] = this.todoData.getTodos();
 
   drop(event: CdkDragDrop<string[]>) {
-    moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
+    moveItemInArray(this.todos, event.previousIndex, event.currentIndex);
   }
   onCheck(event: MatCheckboxChange) {
     this.checkboxValue = event.source.value;
     this.ifChecked = true;
+  }
+
+  deleteTodo(id: number) {
+    this.todoData.deleteTodo(id);
+    return this.todos;
   }
 
   ngOnInit() {

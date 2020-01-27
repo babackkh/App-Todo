@@ -3,3 +3,6 @@ export interface DataModel {
     title: string;
     done: boolean;
 }
+export interface DialogDataModel {
+    todoText: string;
+}

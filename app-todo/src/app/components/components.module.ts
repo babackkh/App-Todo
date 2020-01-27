@@ -13,6 +13,7 @@ const ComponentsArray = [TodoAddComponent, TodoListComponent, TodoListItemCompon
 
 @NgModule({
   declarations: ComponentsArray,
+  entryComponents: [TodoAddComponent],
   imports: [
     CommonModule,
     FormsModule,

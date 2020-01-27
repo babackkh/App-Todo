@@ -1,1 +1,12 @@
-<p>todo-add works!</p>
+<h2 mat-dialog-title>Add a new todo</h2> 
+<mat-dialog-content> 
+    <mat-form-field class="example-full-width w-100"> 
+        <input matInput placeholder="new todo"   
+        [(ngModel)]="data.todoText" > 
+    </mat-form-field> 
+</mat-dialog-content> 
+<mat-dialog-actions> 
+    <button mat-button (click)="onCancel()">Cancel</button> 
+    <button mat-raised-button color="primary"   
+    (click)="onSave(data.todoText)">Save</button> 
+</mat-dialog-actions>

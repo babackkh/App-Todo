@@ -9,7 +9,8 @@ import {
   MatListModule,
   MatGridListModule,
   MatCheckboxModule,
-  MatDialogModule
+  MatDialogModule,
+  MatInputModule
 } from '@angular/material';
 
 const MaterialComponents = [
@@ -22,7 +23,8 @@ const MaterialComponents = [
   MatGridListModule,
   DragDropModule,
   MatCheckboxModule,
-  MatDialogModule
+  MatDialogModule,
+  MatInputModule
 ];
 
 @NgModule({

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material';
 import { TodoAddComponent } from '../todo-add/todo-add.component';
 
+
 @Component({
   selector: 'app-todo-wrap',
   templateUrl: './todo-wrap.component.html',
@@ -13,12 +14,12 @@ export class TodoWrapComponent implements OnInit {
 
   ngOnInit() {
   }
-  openDialog(): void {
-    const dialogRef = this.dialog.open(TodoAddComponent, { width:
-    '500px'
-  });
-
+  openDialog() {
+    const dialogRef = this.dialog.open(TodoAddComponent, { width: '500px'});
     dialogRef.afterClosed().subscribe(result => {
-  console.log('The dialog was closed');
-  });
-}}
+      console.log('The dialog was closed');
+    });
+  }
+
+}
+
