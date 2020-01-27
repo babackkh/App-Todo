@@ -1,19 +1,32 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MatButton } from '@angular/material';
+import { LayoutModule } from '@angular/cdk/layout';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import {
+  MatButtonModule,
+  MatMenuModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatListModule,
+  MatGridListModule,
+  MatCheckboxModule,
+  MatDialogModule
+} from '@angular/material';
 
 const MaterialComponents = [
-  MatButton
+  LayoutModule,
+  MatIconModule,
+  MatListModule,
+  MatButtonModule,
+  MatMenuModule,
+  MatToolbarModule,
+  MatGridListModule,
+  DragDropModule,
+  MatCheckboxModule,
+  MatDialogModule
 ];
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    MaterialComponents
-  ],
-  exports: [
-    MaterialComponents
-  ]
+  imports: [MaterialComponents],
+  exports: [MaterialComponents]
 })
 export class MaterialModule { }

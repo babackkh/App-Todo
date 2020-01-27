@@ -1,21 +1,13 @@
 <div 
-cdkDropList 
-class="example-list" 
-(cdkDropListDropped)="drop($event)">
-    <div 
-    class="example-box" 
-    *ngFor= "let movie of movies; let i = index" cdkDrag>
+    class="example-box" cdkDrag>
         <mat-icon class="mr-3 mt-2">drag_indicator</mat-icon>
         <mat-checkbox
-        [value]= 'i'
-        (change)="onCheck($event)"
         [ngClass]="{'task-done': checkboxValue===i}"
         class="mat-body-2 mt-2">
-        {{ movie }}
+        asdasdawdd
         </mat-checkbox>
         <div class="spacer"></div>
         <button mat-icon-button color="warn">
             <mat-icon>delete</mat-icon>
         </button>
     </div>
-</div>

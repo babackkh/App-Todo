@@ -1,0 +1,17 @@
+<mat-toolbar color='primary'>
+    <mat-toolbar-row>
+        <div class="mat-headline">Todo App</div>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+        <div class="mat-body">Today</div>
+        <div class="spacer"></div>
+        <mat-icon class="mr-2">today</mat-icon>
+        <div class="mat-body-2">22 jan 2020</div>
+    </mat-toolbar-row>
+</mat-toolbar>
+<app-todo-list></app-todo-list>
+<div class="add-btn">
+    <button mat-fab color="primary" (click)="openDialog()"> 
+        <mat-icon mat-list-icon>add</mat-icon> 
+    </button> 
+</div>
