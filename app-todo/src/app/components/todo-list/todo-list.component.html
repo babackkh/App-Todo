@@ -1,24 +1,22 @@
 <div 
 cdkDropList 
-class="example-list" 
+class="list" 
 (cdkDropListDropped)="drop($event)">
-
     <div 
-    class="example-box" 
-    *ngFor= "let todo of todos; let i = index" cdkDrag>
-    {{todo | json}}
+    class="list-item-box"
+    [ngClass]="{'item-box-done': todo.done}" 
+    *ngFor= "let todo of todos" @fadeIn cdkDrag [cdkDragDisabled]='todo.done'>
         <mat-icon class="mr-3 mt-2">drag_indicator</mat-icon>
         <mat-checkbox
-        [value]= 'i'
         [(ngModel)]="todo.done"
-        (change)="onCheck($event)"
-        [ngClass]="{'task-done': checkboxValue===i}"
+        [ngClass]="{'task-done': todo.done}"
         class="mat-body-2 mt-2">
         {{ todo.title }}
         </mat-checkbox>
         <div class="spacer"></div>
-
-        <button mat-icon-button color="warn" (click)="deleteTodo(todo.id)">
+        <button 
+        mat-icon-button color="warn" 
+        (click)="deleteTodo(todo.id)">
             <mat-icon>delete</mat-icon>
         </button>
     </div>

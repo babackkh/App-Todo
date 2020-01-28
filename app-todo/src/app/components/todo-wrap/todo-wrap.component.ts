@@ -12,20 +12,15 @@ import { DialogDataModel } from 'src/app/model/data-model';
 export class TodoWrapComponent implements OnInit {
 
   constructor(public dialog: MatDialog) {}
-
+  today: number = Date.now();
   ngOnInit() {
+
   }
   openDialog() {
-    let _dialogDataModel:DialogDataModel = {
-      todoText: "",
-      direction: "please fill",
-      date: new Date()
+    const dialogData: DialogDataModel = {
+      todoText: '',
     };
-    let curTodo:string = "";
-    const dialogRef = this.dialog.open(TodoAddComponent, { width: '500px', data: _dialogDataModel });
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
+    this.dialog.open(TodoAddComponent, { width: '500px', data: dialogData });
   }
 
 }

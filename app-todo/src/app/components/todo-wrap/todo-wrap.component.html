@@ -6,13 +6,13 @@
         <div class="mat-body">Today</div>
         <div class="spacer"></div>
         <mat-icon class="mr-2">today</mat-icon>
-        <div class="mat-body-2">22 jan 2020</div>
+    <span class="mat-body-2">{{today | date}}</span>
     </mat-toolbar-row>
 </mat-toolbar>
 <app-todo-list></app-todo-list>
 <div class="add-btn d-flex">
     <div class="spacer"></div>
-    <button mat-fab color="primary" (click)="openDialog()"> 
+    <button class="mr-2 mb-2 mt-3" mat-fab color="primary" (click)="openDialog()"> 
         <mat-icon mat-list-icon>add</mat-icon> 
     </button> 
 </div>
