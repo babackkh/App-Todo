@@ -5,4 +5,6 @@ export interface DataModel {
 }
 export interface DialogDataModel {
     todoText: string;
+    direction:string;
+    date:Date;
 }

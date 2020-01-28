@@ -1,12 +1,14 @@
 <h2 mat-dialog-title>Add a new todo</h2> 
 <mat-dialog-content> 
     <mat-form-field class="example-full-width w-100"> 
+        <span>{{data.direction}}</span>
         <input matInput placeholder="new todo"   
         [(ngModel)]="data.todoText" > 
+        <input type="date" [(ngModel)]="data.date" />
     </mat-form-field> 
 </mat-dialog-content> 
 <mat-dialog-actions> 
     <button mat-button (click)="onCancel()">Cancel</button> 
     <button mat-raised-button color="primary"   
-    (click)="onSave(data.todoText)">Save</button> 
+    (click)="onSave(data)">Save</button> 
 </mat-dialog-actions>

@@ -13,7 +13,7 @@ export class TodoServiceService {
     return this.todos;
   }
   addTodo(data: DataModel) {
-    return this.todos.push(data);
+    this.todos.push(data);
   }
   deleteTodo(id: number) {
     const index = id - 1;
