@@ -13,6 +13,6 @@ export const FadeIn =
             animate(500)
         ]),
         transition(':leave', [
-            animate(500, style({ backgroundColor: 'red', opacity: '0', transform: 'translateX(100%)' }))
+            animate(500, style({ backgroundColor: '#ff6347', opacity: '0', transform: 'translateX(100%)' }))
         ])
     ]);

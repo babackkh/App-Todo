@@ -11,6 +11,7 @@ export class TodoServiceService {
 
   getTodos() {
     return this.todos;
+    // return JSON.parse(JSON.stringify(this.todos));
   }
   addTodo(data: DataModel) {
     this.todos.push(data);

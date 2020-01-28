@@ -3,7 +3,6 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { DialogDataModel} from '../../model/data-model';
 import { TodoServiceService } from 'src/app/service/todo-service.service';
 
-
 @Component({
   selector: 'app-todo-add',
   templateUrl: './todo-add.component.html',
@@ -29,7 +28,6 @@ export class TodoAddComponent implements OnInit {
   onSave(data: DialogDataModel) {
     this.todoServiceData.addTodo({id: (this.lastId + 1), title: data.todoText, done: false});
     this.dialogRef.close();
-    console.log(this.todoServiceData.getTodos());
   }
 
 

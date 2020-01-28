@@ -5,7 +5,7 @@ import { TodoAddComponent } from './todo-add/todo-add.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoWrapComponent } from './todo-wrap/todo-wrap.component';
 import { MaterialModule } from '../modules/material.module';
-
+import {NgArrayPipesModule} from 'ngx-pipes';
 
 const ComponentsArray = [TodoAddComponent, TodoListComponent, TodoWrapComponent];
 
@@ -16,7 +16,8 @@ const ComponentsArray = [TodoAddComponent, TodoListComponent, TodoWrapComponent]
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    NgArrayPipesModule
   ],
   exports: ComponentsArray
 })

@@ -25,5 +25,4 @@ export class TodoListComponent {
   deleteTodo(id: number) {
     this.todoData.deleteTodo(id);
   }
-
 }
